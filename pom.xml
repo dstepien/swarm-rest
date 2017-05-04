@@ -32,6 +32,14 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>undertow</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>jaxrs</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -45,6 +53,9 @@
                         <goals>
                             <goal>package</goal>
                         </goals>
+                        <configuration>
+                            <mainClass>pl.dawidstepien.swarm.rest.Main</mainClass>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
